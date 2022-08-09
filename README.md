@@ -6,11 +6,6 @@
 
 
 ## Built With
-
-- <span style ="color:orange">HTML</span>
-- <span style ="color:blue">CSS</span>
-- <span style ="color:yellow">JavaScript</span>
-
 ## Live Demo (if available)
 
 [Live Demo Link](https://livedemo.com)
