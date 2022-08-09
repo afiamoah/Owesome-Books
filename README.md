@@ -10,7 +10,7 @@ dynamically on to the html page.
 ## Built With
 
 - HTML
-- JAVSCRIPT
+- JAVASCRIPT
 
 
 
