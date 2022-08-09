@@ -10,7 +10,6 @@ dynamically on to the html page.
 ## Built With
 - HTML
 - JAVASCRIPT
-
 ## Live Demo (if available)
 
 
