@@ -48,8 +48,8 @@ To get a local copy up and running follow these simple example steps.
 👤 **Author2**
 
 - GitHub: [@githubhandle](https://github.com/haftamudesta)
-- Twitter: [@twitterhandle]([https://twitter.com/twitterhandle](https://www.linkedin.com/in/haftamu-desta-795791a1/))
-- LinkedIn: [LinkedIn]([https://linkedin.com/in/linkedinhandle](https://www.linkedin.com/in/haftamu-desta-795791a1/))
+- Twitter: [@twitterhandle](https://www.linkedin.com/in/haftamu-desta-795791a1/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/haftamu-desta-795791a1/)
 
 ## 🤝 Contributing
 
