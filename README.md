@@ -1,19 +1,17 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
-
-> Description the project.
+# The Owesome Books javascript Project
+ 
+> ## Description
+This Project is build using plane HTML and Javascript.
+A javascript object is created to recieve data from the dom and save to localstorage using javascript and render the data
+dynamically on to the html page.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML
+- JAVSCRIPT
 
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
 
 
 ## Getting Started
@@ -42,9 +40,9 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/afiamoah)
+- Twitter: [@twitterhandle](https://twitter.com/afiamoah)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/afiamoah)
 
 👤 **Author2**
 
