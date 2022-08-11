@@ -3,3 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.main-container {
+  width: 550px;
+  margin: auto;
+  margin-top: 10%;
+}
+
+.collection {
+  width: 550px;
+  border: 2px solid black;
+  height: auto;
+  padding: 10px;
+}
+
+.BookList {
+  background-color: bisque;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5px;
+  padding: 5px;
+  height: 100px;
+}

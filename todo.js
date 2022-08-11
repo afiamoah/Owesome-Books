@@ -1,7 +1,8 @@
 /* eslint-disable linebreak-style */
+// eslint-disable-next-line linebreak-style
+/* eslint-disable no-cond-assign */
 /* eslint-disable eqeqeq */
 /* eslint-disable consistent-return */
-/* eslint-disable linebreak-style */
 /* eslint-disable array-callback-return */
 /* eslint-disable no-unused-expressions */
 // eslint-disable-next-line linebreak-style
@@ -11,40 +12,75 @@ const NewTitle = document.querySelector('#title');
 const NewAuthor = document.querySelector('#author');
 const SaveBooks = localStorage.getItem('BookList');
 const AddBook = document.querySelector('#btn');
+const ErrorChecker = document.querySelector('.checker');
 let StoreBooks = [];
+// clears all fields after data is saved
 const ClearFields = () => {
   NewTitle.value = '';
   NewAuthor.value = '';
 };
-const DisplayAllBooks = () => {
-  ClearFields();
-  DisplayBooks.innerHTML = '';
-  if (SaveBooks == null) {
-    [];
-  } else {
-    StoreBooks = JSON.parse(localStorage.getItem('BookList'));
-    StoreBooks.forEach((Books, index) => {
-      DisplayBooks.innerHTML += `
-        <div class="BookList">
-        <h1 class="titles">${Books.Title}</h1>
-        <h2 class="authors">${Books.Author}</h2>  
-        <button class="remove" id="${index}" onclick="RemoveBooks(event)">Remove</button>
-        <hr class="rule"> 
-        </div>`;
-    });
+// checker to see if form contains data and not empty
+const Validate = () => {
+  if (NewTitle.value !== '' || NewAuthor.value !== '') {
+    ErrorChecker.textContent = '';
+    return true;
   }
 };
 
+// displays data from the localstorage if data exist
+const DisplayAllBooks = () => {
+  DisplayBooks.innerHTML = '';
+  const HoldBooks = JSON.parse(localStorage.getItem('BookList'));
+  if (HoldBooks != null) {
+    StoreBooks = HoldBooks;
+    HoldBooks.forEach((Books, index) => {
+      DisplayBooks.innerHTML += `
+       <div class="BookList">
+       <h1 class="titles">${Books.Title}</h1>
+       <h2 class="authors">${Books.Author}</h2>  
+       <button class="remove" id="${index}" onclick="RemoveBooks(event)">Remove</button>
+       <hr class="rule"> 
+       </div>`;
+    });
+  }
+};
+// check and display data before  page refreshes
+const DecideOnDisplay = () => {
+  if (DisplayBooks.innerHTML === '') {
+    const HoldBooks = JSON.parse(localStorage.getItem('BookList'));
+    StoreBooks = HoldBooks;
+    HoldBooks.forEach((Books, index) => {
+      DisplayBooks.innerHTML += `
+    <div class="BookList">
+    <h1 class="titles">${Books.Title}</h1>
+    <h2 class="authors">${Books.Author}</h2>  
+    <button class="remove" id="${index}" onclick="RemoveBooks(event)">Remove</button>
+    <hr class="rule"> 
+    </div>`;
+    });
+  } else {
+    DisplayAllBooks();
+  }
+};
+// save data to localstorage
 const SaveAllBooks = () => {
   AddBook.addEventListener('click', () => {
-    BookList = {
-      Title: NewTitle.value,
-      Author: NewAuthor.value,
-    };
-    StoreBooks.push(BookList);
-    localStorage.setItem('BookList', JSON.stringify(StoreBooks));
-    DisplayAllBooks();
-    ClearFields();
+    if (SaveBooks != null) {
+      [];
+    }
+    if (Validate()) {
+      BookList = {
+        Title: NewTitle.value,
+        Author: NewAuthor.value,
+      };
+      StoreBooks.push(BookList);
+      localStorage.setItem('BookList', JSON.stringify(StoreBooks));
+      DecideOnDisplay();
+      ClearFields();
+    } else {
+      ErrorChecker.textContent = 'Please Provide valid data before adding books';
+      ErrorChecker.style.color = 'red';
+    }
   });
 };
 
@@ -57,8 +93,8 @@ const RemoveBooks = (event) => {
     }
   });
   localStorage.setItem('BookList', JSON.stringify(DeleteBook));
-  DisplayAllBooks();
+  DecideOnDisplay();
 };
-
-DisplayAllBooks();
 SaveAllBooks();
+
+window.addEventListener('onload', DecideOnDisplay());
