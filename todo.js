@@ -21,7 +21,7 @@ const ClearFields = () => {
 };
 // checker to see if form contains data and not empty
 const Validate = () => {
-  if (NewTitle.value !== '' || NewAuthor.value !== '') {
+  if (NewTitle.value !== '' && NewAuthor.value !== '') {
     ErrorChecker.textContent = '';
     return true;
   }
