@@ -91,7 +91,7 @@ input {
   width: 550px;
   height: 40px;
   padding: 10px;
-  background-color: rgba(245, 245, 245, 0.686);
+  background-color: rgba(24, 18, 18, 0.052);
 }
 
 .remove {
@@ -99,4 +99,9 @@ input {
   border: 3px solid black;
   width: 100px;
   height: 30px;
+}
+
+td {
+  color: black;
+  font-weight: bold;
 }
