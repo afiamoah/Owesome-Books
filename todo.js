@@ -39,7 +39,6 @@ const DisplayAllBooks = () => {
        <h1 class="titles">${Books.Title}</h1>
        <h2 class="authors">${Books.Author}</h2>  
        <button class="remove" id="${index}" onclick="RemoveBooks(event)">Remove</button>
-       <hr class="rule"> 
        </div>`;
     });
   }
