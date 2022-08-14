@@ -6,16 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Owesome Books</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="singlepage.css">
 </head>
 <body>
-    <div class="main-container">
+    <div class="Container-fluid">
+        <header>
+            <div class="searcg-bar">
+                <h1 class="bar-head">A webPage</h1>
+                <div class="webdiv">
+                    <div class="webicon">  
+                        <ul class="list-Con">
+                            <li class="nav-item" id="Lists">Home</li>
+                            <li class="nav-item" id="Adds" >Back</li>
+                            <li class="nav-item" id="Links">About Us</li>
+                        </ul>
+                    
+                    </div>
+                    <div class="search">
+                    <input type="search" placeholder="https://" class="search input">
+                    <button class="button">search</button>
+                    </div>   
+                </div>
+            </div>
+            <nav class="nav-bar">
+            <section class="logo"><a>Owesome Books</a></section>
+           <ul class="list-Container">
+                <li class="nav-items" id="List">List</li>
+                <li class="nav-items" id="Add" >Add New</li>
+                <li class="nav-items" id="Link">Contact</li>
+            </ul>
+            </nav>
+        </header>
+    
+    <section class="main-container">
+        <section class="List-Items">
         <h1 class="owesome-header">All Owesome Books</h1>
         <section class="HoldCollection">
             <table class="collection">
              
                 </table>
         </section>
-        <hr class="line">
+    </section>
         <section class="add-books">
             <h2 class="New-header">Add New Book</h2>
             <div class="newbooks">
@@ -25,7 +57,29 @@
                 <small class="checker"></small><br>
             </div>
             </section> 
-    </div>
+            <section class="Contact">
+                <header>
+                    <h2 class="con-head">Contact information</h2>
+                </header>
+                <section class="contact-sub">
+                 <h3>Do you have any questions or you just want to say "Hello"?</h3> 
+                 <h3>you can reach out to us!</h3>    
+                 <ul  class="con-ul">
+                    <li><a href="">Email:afiamoah90@gmail.com</a></li>
+                    <li><a href="">Telephone:0552795346-0208083366</a></li>
+                    <li><a href="">Address:plot 22 BLK 8 Dominase</a></li>
+                 </ul> 
+                </section>
+            </section>
+    </section>
+    <footer>
+        <section class="copyright">
+         <h3>Copy Right</h3>
+        </section>
+        <section class="copy"></section>
+    </footer>
+</div>
      <script src="owesome.js"></script>
+     <script src="singlepage.js"></script>
 </body>
 </html>

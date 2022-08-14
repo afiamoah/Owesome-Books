@@ -8,10 +8,15 @@
 .main-container {
   width: 550px;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 5%;
   display: flex;
   flex-direction: column;
   gap: 30px;
+  height: 400px;
+}
+
+.HoldCollection {
+  margin-top: 20px;
 }
 
 .mytable {
@@ -46,13 +51,6 @@
   margin-left: 40%;
 }
 
-.add-books {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .newbooks {
   margin-top: 15px;
 }
@@ -60,6 +58,7 @@
 .owesome-header {
   text-align: center;
   font-size: 50px;
+  margin-top: -10px;
 }
 
 .New-header {
@@ -104,4 +103,66 @@ input {
 td {
   color: black;
   font-weight: bold;
+}
+
+.copyright {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+  margin: auto 5% 5%;
+}
+
+.copy {
+  border: 2px solid black;
+  height: 50px;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: -50px;
+}
+
+.con-head {
+  font-size: 50px;
+}
+
+.contact-sub {
+  margin-top: 20px;
+}
+
+.con-ul {
+  margin-top: 20px;
+}
+
+.con-ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .collection {
+    width: 450px;
+    border: 2px solid black;
+    height: auto;
+    padding: 10px;
+    margin-left: 12px;
+  }
+
+  .owesome-header {
+    text-align: center;
+    font-size: 40px;
+    margin-top: -10px;
+  }
+
+  .Display {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 10px;
+    width: 450px;
+    height: 40px;
+    padding: 10px;
+    background-color: rgba(24, 18, 18, 0.052);
+  }
 }
