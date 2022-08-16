@@ -5,6 +5,8 @@
 This Project is build using plane HTML and Javascript.
 A javascript object is created to recieve data from the dom and save to localstorage using javascript and render the data
 dynamically on to the html page.
+Modules directory created and data javascript files are imported as modules inside [index.js file](index.js).
+Time and date were generated using [luxon](modules\luxon.js)
 
 
 ## Built With
