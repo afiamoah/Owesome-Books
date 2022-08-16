@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Owesome Books App</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="singlepage.css">
 </head>
 <body>
     <div class="Container-fluid">
@@ -38,6 +36,9 @@
             </ul>
             </nav>
         </header>
+        <div class="datetime">
+            <p class="date"></p>
+        </div>
     
     <section class="main-container">
         <section class="List-Items">
@@ -79,7 +80,8 @@
         <section class="copy"></section>
     </footer>
 </div>
-     <script src="owesome.js"></script>
-     <script src="singlepage.js"></script>
+     <script type="module" src="index.js"></script>
+     <script type="module" src="modules/datetime.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/luxon@3.0.1/build/global/luxon.min.js"></script>
 </body>
 </html>

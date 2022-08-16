@@ -1,18 +1,13 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable no-sequences */
-/* eslint-disable linebreak-style */
 /* eslint-disable no-plusplus */
-/* eslint-disable linebreak-style */
 /* eslint-disable indent */
 /* eslint-disable class-methods-use-this */
-/* eslint-disable linebreak-style */
 /* eslint-disable eqeqeq */
 /* eslint-disable consistent-return */
-/* eslint-disable linebreak-style */
 /* eslint-disable array-callback-return */
 /* eslint-disable no-unused-expressions */
-// eslint-disable-next-line linebreak-style
-class Books {
+export default class Books {
   constructor() {
     this.BookList = {};
     this.DisplayBooks = document.querySelector('.collection');
@@ -40,7 +35,7 @@ class Books {
      }
    }
 
-   DisplayAllBooks() {
+   DisplayAllBooks=() => {
      this.DisplayBooks.innerHTML = '';
      this.HoldBooks = JSON.parse(localStorage.getItem('BookList'));
      if (this.HoldBooks != null) {
@@ -55,7 +50,7 @@ class Books {
      }
    }
 
-   DecideOnDisplay() {
+   DecideOnDisplay=() => {
      if (this.DisplayBooks.innerHTML === '') {
        this.HoldBooks = JSON.parse(localStorage.getItem('BookList'));
        this.StoreBooks = this.HoldBooks;
@@ -71,7 +66,7 @@ class Books {
      }
    }
 
-   AddNewBook() {
+   AddNewBook=() => {
      this.AddBook.addEventListener('click', () => {
       if (this.SaveBooks != null) {
         [];
@@ -92,7 +87,7 @@ class Books {
      });
    }
 
-   RemoveBooks(event) {
+   RemoveBooks=(event) => {
      const Findid = event.target.id;
      const DeleteBook = this.StoreBooks.filter((Book, index) => {
        if (index != Findid) {
@@ -103,5 +98,3 @@ class Books {
      this.DecideOnDisplay();
    }
 }
-const bk = new Books();
-bk.AddNewBook();
