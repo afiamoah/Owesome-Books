@@ -44,7 +44,7 @@ export default class Books {
          this.DisplayBooks.innerHTML += `
          <tr class="Display" style="background:+ colors[i][j] +;">
          <td><span>"</span>${Books.Title}<span>" by </span>${Books.Author}</td>
-         <td><button class="remove" id="${index}" onclick="bk.RemoveBooks(event)">Remove</button></td>
+         <td><button class="remove" id="${index}">Remove</button></td>
          </tr>`;
        });
      }
@@ -58,7 +58,7 @@ export default class Books {
          this.DisplayBooks.innerHTML += `
          <tr class="Display">
          <td><span>"</span>${Books.Title}<span>" by </span>${Books.Author}</td>
-         <td><button class="remove" id="${index}" onclick="bk.RemoveBooks(event)">Remove</button></td>
+         <td><button class="remove" id="${index}">Remove</button></td>
          </tr>`;
        });
      } else {
@@ -87,14 +87,21 @@ export default class Books {
      });
    }
 
-   RemoveBooks=(event) => {
-     const Findid = event.target.id;
-     const DeleteBook = this.StoreBooks.filter((Book, index) => {
-       if (index != Findid) {
-         return Book;
-       }
-     });
-     localStorage.setItem('BookList', JSON.stringify(DeleteBook));
-     this.DecideOnDisplay();
+   RemoveBooks=() => {
+    if(document.body.contains(document.querySelector('.remove'))){
+document.querySelectorAll('.remove').forEach((rm)=>{
+rm.addEventListener('click',(event) =>{
+  const Findid = event.target.id;
+  const DeleteBook = this.StoreBooks.filter((Book, index) => {
+    if (index != Findid){
+      return Book;
+ }
+  });
+  localStorage.setItem('BookList', JSON.stringify(DeleteBook));
+  this.DecideOnDisplay();
+})
+    })
+  
    }
+  }
 }
