@@ -101,7 +101,6 @@ rm.addEventListener('click',(event) =>{
   this.DecideOnDisplay();
 })
     })
-  
    }
   }
 }
