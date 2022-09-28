@@ -99,7 +99,9 @@ rm.addEventListener('click',(event) =>{
   });
   localStorage.setItem('BookList', JSON.stringify(DeleteBook));
   this.DecideOnDisplay();
+  window.location.reload();
 })
+
     })
    }
   }

@@ -8,8 +8,6 @@ const bk = new Books();
 bk.AddNewBook();
 AddNewBook();
 DisplayAllBooks();
-window.addEventListener("load", () => {
-  });
 ShowContactDetails();
 DisplayDateTime(Date)
 bk.RemoveBooks();
